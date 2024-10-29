@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Básculas - Básculas K-Libra S. de R.L.</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/superresolution.css">
+    <link rel="stylesheet" href="../css/generalizador.css">
+</head>
+<body>
+    <div class="controlador">
+        <header>
+            <div class="control">
+                <img class="logo_principal" src="../img/logo_klibra.webp" alt="logo">
+                <div>
+                    <a class="nombre_empresa" href="../index.html">Básculas K-Libra S. de R.L.</a>
+                </div>
+            </div>
+            <nav>
+                <a href="../index.html" class="enlace">Inicio</a>
+                <a href="../pages/catalogo.html" class="enlace">Catálogo</a>
+                <a href="" class="enlace">Nuestra Garantía</a>
+                <a href="" class="enlace">Contáctenos</a>
+            </nav>
+        </header>
+        <main>
+            <div class="basculas">
+                <h1 class="titular" id="bascula">Básculas de Plataforma</h1>
+                <div class="carrusel-contenido_BG">
+                    <div class="carrusel-caja_BG">
+                        <div class="carrusel-elemento_BG">
+                            <img class="imagenesBG" src="../img/productos/camionera de ejes.webp">
+                        </div>
+                        <div class="carrusel-elemento_BG">   
+                            <img class="imagenesBG" src="../img/productos/2.jpg">
+                        </div>
+                        <div class="carrusel-elemento_BG">   
+                            <img class="imagenesBG" src="../img/productos/3.jpg">                        
+                        </div>
+                    </div>
+                </div>
+                <div class="boxINFO">
+                    <div class="descripcion_basculas">
+                        <div class="descripcionbasculas">
+                            <h3 class="titular">Descripción:</h3>
+                            <p>
+                                Ideal para el pesado de Maíz, frijoles, café, arroz.
+                                Disponible en medidas de 2x4, 4x4, 5x5, 4x8, 10x10 y más.   
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formulario">
+                <form action="../php/codpost.php" method="post">
+                    <h3 class="titular">Haga su cotización o consulta aquí</h3>
+                    <fieldset>
+                        <label for="name" class="label_form">Nombre y Apellido</label>
+                        <input type="text" name="name" class="inputs" id="nombre" placeholder="Ingrese su nombre y apellido" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="number" class="label_form">Teléfono</label>
+                        <input type="number" name="number" class="inputs" id="telefono" placeholder="Ingrese un teléfono" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="email" class="label_form">Correo Electrónico</label>
+                        <input type="email" name="email" class="inputs" id="correo" placeholder="Ingrese su correo electrónico" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="text" class="label_form">Mensaje</label>
+                        <textarea name="" id="" class="input_textarea" id="mensaje" placeholder="Ingrese su consulta aquí" required></textarea>
+                    </fieldset>
+                    <button type="submit" class="boton">Enviar</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <a class="informacion">Básculas K-Libra S. de R.L. Copyright © 2024, Honduras.</a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="primer_listado">
+                        <img class="favicon" src="../assets/telefono.webp" alt="teléfono">
+                        <a class="informacion">+504-9964-4535</a>
+                    </li>
+                    <li class="primer_listado">
+                        <img class="favicon" src="../assets/correo.webp" alt="correo">
+                        <a class="informacion">basculasklibra@yahoo.com</a>
+                    </li>
+                    <li class="primer_listado">
+                        <img class="favicon" src="../assets/ubicacion.webp" alt="ubicación">
+                        <a class="informacion">San Pedro Sula, Cortés</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
