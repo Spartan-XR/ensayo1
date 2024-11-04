@@ -1,0 +1,75 @@
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50vh;
+    border-radius: .9rem;
+    background: #f0f0f0;
+    padding: 20px;
+}
+.main-view {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.original-image {
+    width: 400px;
+    height: 300px;
+    cursor: crosshair;
+    position: relative;
+    border-radius: .9rem;
+}
+.original-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.zoom-view {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: .9rem;
+}
+.zoom-view.active {
+    opacity: 1;
+}
+.zoomed-image {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    transform-origin: 0 0;
+    pointer-events: none;
+}
+.zoomed-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.thumbnail {
+    width: 100px;
+    height: 75px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.thumbnail:hover {
+    border-color: #4ecdc4;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.thumbnail.active {
+    border-color: #ff6b6b;
+}
