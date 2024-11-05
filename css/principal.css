@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    content-visibility: auto;
 }
 
 body {
+    content-visibility: auto;
     font-family: Arial, sans-serif;
 }
 
