@@ -112,19 +112,19 @@ section{
 
 /* Usando degradados para generar imágenes de ejemplo */
 .carousel-item:nth-child(1) {
-    background-image: url(/img/productos/2.jpg);
+    background-image: url(./img/productos/2.jpg);
 }
 
 .carousel-item:nth-child(2) {
-    background-image: url(/img/productos/3.jpg);
+    background-image: url(./img/productos/3.jpg);
 }
 
 .carousel-item:nth-child(3) {
-    background-image: url(/img/productos/4.jpg);
+    background-image: url(./img/productos/4.jpg);
 }
 
 .carousel-item:nth-child(4) {
-    background-image: url(/img/productos/camionera\ de\ ejes.webp) ;
+    background-image: url(./img/productos/camionera\ de\ ejes.webp) ;
 }
 
 @keyframes carousel {
