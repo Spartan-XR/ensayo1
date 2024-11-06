@@ -1,11 +1,16 @@
-window.addEventListener('beforeunload', function() { 
-    sessionStorage.setItem('formState', 'leaving'); 
-}); // Limpiar el formulario al regresar a la página window.addEventListener('load', function() { 
-if (sessionStorage.getItem('formState') === 'leaving') { 
-    document.getElementById('contact-form').reset(); 
-    sessionStorage.removeItem('formState'); } 
+document.getElementById('contactar').addEventListener('submit', function(e) {
+    // Guardar referencia al formulario
+    const form = this;
+    
+    // Esperar a que el formulario se envíe
+    setTimeout(function() {
+        // Limpiar todos los campos
+        form.reset();
+    }, 1000);
 });
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    this.reset(); // Redirige a otra página 
-    window.location.href = '../pages/contacto.html'; // Cambia 'gracias.html' por la URL de la página de destino 
-});
+
+// Verificar si el usuario viene de regreso de formspree
+if (window.location.search.includes('submitted=true')) {
+    // Limpiar el formulario
+    document.getElementById('contactar').reset();
+}
