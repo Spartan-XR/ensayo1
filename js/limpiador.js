@@ -7,4 +7,5 @@ if (sessionStorage.getItem('formState') === 'leaving') {
 });
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     this.reset(); // Redirige a otra página 
-    window.location.href = '../pages/contacto.html'; // Cambia 'gracias.html' por la URL de la página de destino });
+    window.location.href = '../pages/contacto.html'; // Cambia 'gracias.html' por la URL de la página de destino 
+});
