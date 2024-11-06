@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+/*------------------------Main------------------------*/
+main {
+    margin-top: 120px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.garantia-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.garantia-section h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #005b96;
+    padding-bottom: 0.5rem;
+}
+
+.garantia-section ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.garantia-section li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.garantia-section li:before {
+    content: "✓";
+    color: #005b96;
+    position: absolute;
+    left: 0;
+}
+
+.certificacion-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/*------------------Slider--------------------------------*/
+.slides {
+    height: 50vh;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+    box-shadow: rgba(255, 96, 96, 0.45) 0px 5px 15px;
+}
+.slide {
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+    inset: 0;
+    animation: slide-show 12s infinite;
+}
+.slide-2 {
+    animation-delay: 4s;
+}
+.slide-3 {
+    animation-delay: 8s;
+}
+.slide-4 {
+    animation-delay: 10s;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes slide-show {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20%, 30% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.enlaces{
+    color: white;
+    text-decoration: none;
+}
+
+.enlaces:hover{
+    color: red;
+}
+
+
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: flex;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .nav-toggle ~ nav {
+        display: none;
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #333;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav li {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+}
