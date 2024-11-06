@@ -6,7 +6,7 @@ document.getElementById('contactar').addEventListener('submit', function(e) {
     setTimeout(function() {
         // Limpiar todos los campos
         form.reset();
-    }, 300);
+    }, 100);
 });
 
 // Verificar si el usuario viene de regreso de formspree
