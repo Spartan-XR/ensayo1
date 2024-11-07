@@ -258,7 +258,7 @@ section{
 
 @media (max-width: 598px) {
     .promo-text{
-        margin-left: 1rem;
+        margin-left: .8rem;
     }
 
     .carousel {
