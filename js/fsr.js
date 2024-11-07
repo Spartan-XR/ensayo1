@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         lazyLoadElements: function() {
             // Lazy loading para imágenes y contenido no crítico
             const lazyElements = document.querySelectorAll('img[data-src], iframe[data-src]');
-            
             const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         preloadCriticalAssets: function() {
             // Precargar recursos críticos
             const criticalAssets = [
-                // Agrega aquí URLs de recursos críticos si los hay
+                
             ];
 
             criticalAssets.forEach(asset => {
@@ -41,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         deferNonCritical: function() {
-            // Diferir la carga de scripts no críticos
             const scripts = document.querySelectorAll('script[data-defer]');
             scripts.forEach(script => {
                 script.setAttribute('defer', '');
@@ -65,14 +63,12 @@ document.addEventListener('DOMContentLoaded', function() {
             return types[extension] || 'resource';
         }
     };
-
     // Optimizar el rendimiento del DOM
     const performance = {
         init: function() {
             this.smoothScroll();
             this.optimizeEventListeners();
         },
-
         smoothScroll: function() {
             // Implementar scroll suave
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -88,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         },
-
         optimizeEventListeners: function() {
             // Implementar delegación de eventos
             document.addEventListener('click', function(e) {
@@ -99,20 +94,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     };
-
     // Inicializar optimizaciones
     optimization.init();
     performance.init();
 });
-
 // Cache para recursos estáticos
 const CACHE_NAME = 'basculas-klibra-cache-v1';
 const urlsToCache = [
     '/',
     '/index.html',
-    // Agregar aquí otros recursos estáticos
 ];
-
 // Gestión del cache
 self.addEventListener('install', event => {
     event.waitUntil(
@@ -120,7 +111,6 @@ self.addEventListener('install', event => {
             .then(cache => cache.addAll(urlsToCache))
     );
 });
-
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
