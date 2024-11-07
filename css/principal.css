@@ -193,7 +193,7 @@ section{
     overflow: hidden;
     width: 100%;
     height: 30vh;
-    margin-bottom: -10vh;
+    margin-bottom: -5vh;
     animation: backgroundShift 3s infinite;
 }
 
