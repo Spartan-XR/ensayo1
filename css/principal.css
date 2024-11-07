@@ -215,6 +215,9 @@ section{
 
 /*----------------Medias---------------------------*/
 @media (min-width: 599px) and (max-width: 768px) {
+    .promo-text{
+        margin-left: 1rem;
+    }
     .carousel {
         height: 60vh;
     }
