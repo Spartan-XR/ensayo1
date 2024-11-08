@@ -1,5 +1,8 @@
+/*-Genera la animacion de particulas al visualizarlo en la PC-*/
 function createParticles() {
+    /*-Constante donde almacenamos la ubicacion donde se mostraran las particulas-*/
     const container = document.getElementById('particles');
+    /*-Aqui se hace la base para que las particulas se generen aleatoreamente-*/
     for(let i = 0; i < 20; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
