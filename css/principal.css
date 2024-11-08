@@ -169,6 +169,10 @@ section{
     color: red;
 }
 
+.pro{
+    text-decoration: none;
+}
+
 /*---------Promocionales----------------------------*/
 .banner {
     margin-top: 10vh;
