@@ -202,8 +202,6 @@ textarea.form-control {
     color: red;
 }
 
-
-
 @media (max-width: 992px) {
     .product-container {
         grid-template-columns: 1fr;
@@ -253,8 +251,8 @@ textarea.form-control {
     }
 
     .videos{
-        width: 250px;
-        height: 250px;
+        width: 225px;
+        height: 225px;
     }
 }
 
