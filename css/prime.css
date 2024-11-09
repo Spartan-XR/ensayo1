@@ -794,6 +794,10 @@ textarea.form-control {
         margin-left: -1rem;
     }
 
+    .thumbnails img{
+        width: 30%;
+    }
+
     .videos{
         width: 225px;
         height: 225px;
