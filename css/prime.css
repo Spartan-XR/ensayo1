@@ -636,7 +636,9 @@ textarea.form-control {
         height: 225px;
         margin-left: -.5rem;
     }
-    
+    .garantia-section{
+        grid-template-columns: 1fr;
+    }
 }
 @media (max-width: 598px) {
     .logo{
