@@ -491,6 +491,7 @@ textarea.form-control {
   }
   
   .contenido_garantia {
+    font-weight: 600;
     color: #333;
     font-size: 14px;
     line-height: 1.5;
@@ -555,7 +556,9 @@ textarea.form-control {
         opacity: 0;
     }
 }
-
+/*----------------------------FIN DEL GARANTIA------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*------------------------------CONTACTO------------------------------------*/
 
 
 
@@ -729,17 +732,15 @@ textarea.form-control {
     }
 
     .certificacion-section, .slides{
-        height: 25dvh;
+        height: 30dvh;
     }
 
     .slides{
         width: 100%;
-        position: relative;
     }
 
     .slides img{
         width: 100%;
-        max-height: fit-content;
-        object-fit: cover;
+        object-fit:cover;
     }
 }
