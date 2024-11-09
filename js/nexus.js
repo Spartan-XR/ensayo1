@@ -19,15 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     mostrarSeccion();
     window.addEventListener('hashchange', mostrarSeccion);
 
-    // Inicializar partículas
-    if(document.getElementById('particles')) {
-        createParticles();
-        setInterval(() => {
-            document.getElementById('particles').innerHTML = '';
-            createParticles();
-        }, 3000);
-    }
-
     // Inicializar funcionalidad del formulario (de limpiador.js)
     const formularioContacto = document.getElementById('contactar');
     if(formularioContacto) {
