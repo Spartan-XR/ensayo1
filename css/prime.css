@@ -314,21 +314,8 @@ section{
 .view-more:hover {
     background: #555;
 }
-/*------------------FIN DEL CATALOGO--------------------------*/
-/*------------------------------------------------------------*/
-/*----------------------SUBCATALOGO---------------------------*/
-.subcategory-image {
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* Usamos gradientes como placeholder para las imágenes */
-    background-image: linear-gradient(45deg, #f1f1f1, #e1e1e1);
-    background-size: 170px;
-}
-
-
+/*------------------FIN DEL CATALOGO y SUBCATALOGO--------------------------*/
+/*--------------------------------------------------------------------------*/
 
 
 
