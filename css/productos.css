@@ -1,31 +1,6 @@
 
-
-/* Footer */
-.footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.enlaces{
-    color: white;
-    text-decoration: none;
-}
-
-.enlaces:hover{
-    color: red;
-}
-
 @media (max-width: 992px) {
-    .product-container {
-        grid-template-columns: 1fr;
-    }
-
-    .zoom-window {
-        display: none !important;
-    }
+    
 }
 
 @media (max-width: 768px) {
@@ -62,16 +37,7 @@
         padding: 0.5rem 0;
     }
 
-    .product-container{
-        margin-top: 6rem;
-        margin-left: -1rem;
-    }
-
-    .videos{
-        width: 225px;
-        height: 225px;
-        margin-left: -.5rem;
-    }
+    
 }
 
 /*-------------------------------------------------*/

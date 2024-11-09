@@ -516,6 +516,18 @@ textarea.form-control {
     h2, p, #secF li{
         font-size: 1em;
     }
+
+    .product-container{
+        margin-top: 6rem;
+        margin-left: -1rem;
+    }
+
+    .videos{
+        width: 225px;
+        height: 225px;
+        margin-left: -.5rem;
+    }
+    
 }
 @media (max-width: 598px) {
     .logo{
@@ -569,4 +581,5 @@ textarea.form-control {
     .categories-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+    /*--------------PRODUCTOS----------------*/
 }
