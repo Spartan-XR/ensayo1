@@ -316,8 +316,16 @@ section{
 }
 /*------------------FIN DEL CATALOGO--------------------------*/
 /*------------------------------------------------------------*/
-
-
+/*----------------------SUBCATALOGO---------------------------*/
+.subcategory-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Usamos gradientes como placeholder para las imágenes */
+    background-image: linear-gradient(45deg, #f1f1f1, #e1e1e1);
+    background-size: 170px;
+}
 
 
 
