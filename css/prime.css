@@ -721,7 +721,7 @@ textarea.form-control {
     }
 
     .garantia-section{
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
     }
 
     .slides {
