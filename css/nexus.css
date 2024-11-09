@@ -61,6 +61,11 @@ footer {
     color: red;
 }
 
+.pro{
+    text-decoration: none;
+}
+
+
 /* Media Query común */
 @media (max-width: 768px) {
     .nav-toggle-label {
