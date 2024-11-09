@@ -1,92 +1,119 @@
-// Optimización de carga y mejora de CLS
 document.addEventListener('DOMContentLoaded', function() {
-    // Reservar espacio para imágenes y contenido dinámico
-    function reserveSpace() {
-        const dynamicElements = document.querySelectorAll('.producto-container');
-        dynamicElements.forEach(element => {
-            element.style.minHeight = '300px';
-            element.style.position = 'relative';
-        });
-    }
+    // Optimizar la carga de recursos
+    const optimization = {
+        init: function() {
+            this.lazyLoadElements();
+            this.preloadCriticalAssets();
+            this.deferNonCritical();
+        },
 
-    // Lazy loading para imágenes
-    function lazyLoadImages() {
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-            img.loading = 'lazy';
-            img.decoding = 'async';
-        });
-    }
-
-    // Optimizar formularios
-    function optimizeForms() {
-        const forms = document.querySelectorAll('form');
-        forms.forEach(form => {
-            // Prevenir CLS en los formularios
-            form.style.minHeight = form.offsetHeight + 'px';
-            
-            // Validación en tiempo real
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // Aquí iría la lógica de validación
-            });
-        });
-    }
-
-    // Optimizar menú de navegación
-    function optimizeNavigation() {
-        const nav = document.querySelector('nav');
-        if (nav) {
-            nav.style.height = nav.offsetHeight + 'px';
-            nav.style.position = 'relative';
-        }
-    }
-
-    // Performance monitoring
-    function measurePerformance() {
-        if ('PerformanceObserver' in window) {
-            const observer = new PerformanceObserver((list) => {
-                list.getEntries().forEach((entry) => {
-                    // Registrar métricas de CLS
-                    if (entry.entryType === 'layout-shift') {
-                        console.log('CLS:', entry.value, entry.hadRecentInput);
+        lazyLoadElements: function() {
+            // Lazy loading para imágenes y contenido no crítico
+            const lazyElements = document.querySelectorAll('img[data-src], iframe[data-src]');
+            const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        element.src = element.dataset.src;
+                        element.removeAttribute('data-src');
+                        observer.unobserve(element);
                     }
                 });
             });
 
-            observer.observe({ entryTypes: ['layout-shift'] });
+            lazyElements.forEach(element => lazyLoadObserver.observe(element));
+        },
+
+        preloadCriticalAssets: function() {
+            // Precargar recursos críticos
+            const criticalAssets = [
+                
+            ];
+
+            criticalAssets.forEach(asset => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = this.getResourceType(asset);
+                link.href = asset;
+                document.head.appendChild(link);
+            });
+        },
+
+        deferNonCritical: function() {
+            const scripts = document.querySelectorAll('script[data-defer]');
+            scripts.forEach(script => {
+                script.setAttribute('defer', '');
+                script.removeAttribute('data-defer');
+            });
+        },
+
+        getResourceType: function(url) {
+            const extension = url.split('.').pop().toLowerCase();
+            const types = {
+                'css': 'style',
+                'js': 'script',
+                'png': 'image',
+                'jpg': 'image',
+                'jpeg': 'image',
+                'webp': 'image',
+                'gif': 'image',
+                'woff2': 'font',
+                'woff': 'font'
+            };
+            return types[extension] || 'resource';
         }
-    }
-
-    // Optimizar carga de contenido dinámico
-    function optimizeDynamicContent() {
-        // Establecer dimensiones para contenedores de productos
-        const productContainers = document.querySelectorAll('.producto-container');
-        productContainers.forEach(container => {
-            container.style.aspectRatio = '16/9';
-            container.style.contentVisibility = 'auto';
-        });
-    }
-
-    // Inicializar todas las optimizaciones
-    function init() {
-        reserveSpace();
-        lazyLoadImages();
-        optimizeForms();
-        optimizeNavigation();
-        measurePerformance();
-        optimizeDynamicContent();
-    }
-
-    // Ejecutar optimizaciones
-    init();
-
-    // Manejar redimensionamiento de ventana
-    let resizeTimeout;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            init();
-        }, 250);
-    });
+    };
+    // Optimizar el rendimiento del DOM
+    const performance = {
+        init: function() {
+            this.smoothScroll();
+            this.optimizeEventListeners();
+        },
+        smoothScroll: function() {
+            // Implementar scroll suave
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        },
+        optimizeEventListeners: function() {
+            // Implementar delegación de eventos
+            document.addEventListener('click', function(e) {
+                // Manejar eventos de click de manera eficiente
+                if (e.target.matches('.menu-item')) {
+                    // Lógica para elementos del menú
+                }
+            });
+        }
+    };
+    // Inicializar optimizaciones
+    optimization.init();
+    performance.init();
+});
+// Cache para recursos estáticos
+const CACHE_NAME = 'basculas-klibra-cache-v1';
+const urlsToCache = [
+    '/',
+    '/index.html',
+];
+// Gestión del cache
+self.addEventListener('install', event => {
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then(cache => cache.addAll(urlsToCache))
+    );
+});
+self.addEventListener('fetch', event => {
+    event.respondWith(
+        caches.match(event.request)
+            .then(response => response || fetch(event.request))
+    );
 });
