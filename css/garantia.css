@@ -1,50 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background: #333;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    color: white;
-    font-size: 1.5rem;
-}
-
-.nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    display: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
 /*------------------------Main------------------------*/
-main {
+.main-garantia {
     margin-top: 120px;
     padding: 2rem;
     max-width: 1200px;
