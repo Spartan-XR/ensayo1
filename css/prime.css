@@ -387,6 +387,10 @@ section{
     h2, p, #secF li{
         font-size: 1em;
     }
+    /*--------------CATALOGO-------------*/
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
 @media (max-width: 598px) {
     .logo{
@@ -435,5 +439,9 @@ section{
 
     p, #secF li{
         font-size: small;
+    }
+    /*----------------CATALOGO----------------*/
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
