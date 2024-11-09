@@ -1,5 +1,7 @@
 /*---------------------------------------------------*/
 /*-----------------Pagina Principal------------------*/
+/*---------------------------------------------------*/
+/*--------------Caracteristicas BASE-----------------*/
 * {
     margin: 0;
     padding: 0;
@@ -53,39 +55,58 @@ footer {
     padding: 2rem;
     text-align: center;
 }
-/*------------------------------------------------------------
----------------------Section--------------------------------*/
-
-section{
-    min-height: 40vh;
+/*----------Fin de Caracteristicas BASE-------------*/
+/*---------Promocionales----------------------------*/
+.pro{
+    text-decoration: none;
+}
+.banner {
+    margin-top: 10vh;
+    height: 15vh;
+    background: linear-gradient(-45deg, #a5a5a5, #5c5c5c, #d0d0d0, #707070);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
 }
 
-#secA { 
-    background: #f8f9fa; margin-top: -70px; padding: 0; 
+
+.text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+    animation: bounce 2s infinite;
 }
 
-#secB h2, #secC h2, #secD h2, #secE h2, #secF h2{ 
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-#secB p, #secC p, #secD p, #secE p, #secF p{ 
-    margin-left: 1rem;
-}
-#secC { background: #dbe3e8; padding: 2rem;}
-#secD { background: #c6ccd1; padding: 2rem;}
-#secE { background: #adb5bd; padding: 2rem;}
-#secF { background: #85919b; padding: 2rem;}
-
-#secF li::marker{
-    color: rgb(46, 214, 46);
-    content: "✓";
-    font-size: large;
+.main-text {
+    font-size: calc(1rem + 1.5vw);
     font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sub-text {
+    font-size: calc(0.8rem + 1vw);
+}
+
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 3s infinite;
 }
 /*------------------------------------------------------------
 ---------------------Carrusel--------------------------------*/
@@ -128,13 +149,7 @@ section{
     background-image: url(/img/productos/camionera\ de\ ejes.webp) ;
 }
 
-@keyframes carousel {
-    0%, 20% { transform: translateX(0); }
-    25%, 45% { transform: translateX(-25%); }
-    50%, 70% { transform: translateX(-50%); }
-    75%, 95% { transform: translateX(-75%); }
-    100% { transform: translateX(0); }
-}
+
 /* Agregando overlay con texto para las imágenes */
 .carousel-item {
     position: relative;
@@ -161,6 +176,41 @@ section{
     text-align: center;
     padding: 1rem;
 }
+/*------------------------------------------------------------
+---------------------Section--------------------------------*/
+
+section{
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#secA { 
+    background: #f8f9fa; margin-top: -70px; padding: 0; 
+}
+
+#secB h2, #secC h2, #secD h2, #secE h2, #secF h2{ 
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#secB p, #secC p, #secD p, #secE p, #secF p{ 
+    margin-left: 1rem;
+}
+#secC { background: #dbe3e8; padding: 2rem;}
+#secD { background: #c6ccd1; padding: 2rem;}
+#secE { background: #adb5bd; padding: 2rem;}
+#secF { background: #85919b; padding: 2rem;}
+
+#secF li::marker{
+    color: rgb(46, 214, 46);
+    content: "✓";
+    font-size: large;
+    font-weight: bold;
+}
+
 
 .enlaces{
     color: white;
@@ -171,27 +221,9 @@ section{
     color: red;
 }
 
-.pro{
-    text-decoration: none;
-}
 
-/*---------Promocionales----------------------------*/
-.banner {
-    margin-top: 10vh;
-    height: 15vh;
-    background: linear-gradient(-45deg, #a5a5a5, #5c5c5c, #d0d0d0, #707070);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-}
 
+/*-Animaciones-*/
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -202,23 +234,6 @@ section{
     100% {
         background-position: 0% 50%;
     }
-}
-
-.text {
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    font-family: Arial, sans-serif;
-    animation: bounce 2s infinite;
-}
-
-.main-text {
-    font-size: calc(1rem + 1.5vw);
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.sub-text {
-    font-size: calc(0.8rem + 1vw);
 }
 
 @keyframes bounce {
@@ -233,18 +248,12 @@ section{
     }
 }
 
-.particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.particle {
-    position: absolute;
-    background: rgba(255,255,255,0.5);
-    border-radius: 50%;
-    pointer-events: none;
-    animation: float 3s infinite;
+@keyframes carousel {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-25%); }
+    50%, 70% { transform: translateX(-50%); }
+    75%, 95% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
 }
 
 @keyframes float {
