@@ -202,6 +202,17 @@ textarea.form-control {
     color: red;
 }
 
+.section {
+    display: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.videos{
+    border-radius: .9rem; 
+    width:540px; height: 325px;
+}
+
 @media (max-width: 992px) {
     .product-container {
         grid-template-columns: 1fr;
