@@ -178,7 +178,6 @@ footer {
 }
 /*------------------------------------------------------------
 ---------------------Section--------------------------------*/
-
 section{
     min-height: 40vh;
     display: flex;
@@ -359,52 +358,8 @@ section{
 
 
 /*----------------Medias---------------------------*/
-@media (min-width: 599px) and (max-width: 768px) {
-    .banner{
-        margin-top: 10vh;
-    }
-    .carousel {
-        height: 60vh;
-    }
-    .nav-toggle-label {
-        display: flex;
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-    }
 
-    .nav-toggle ~ nav {
-        display: none;
-    }
-
-    .nav-toggle:checked ~ nav {
-        display: block;
-    }
-
-    nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #333;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    nav li {
-        text-align: center;
-        padding: 0.5rem 0;
-    }
-
-    h2, p, #secF li{
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 598px) {
+@media (max-width: 768px) {
     .banner{
         margin-top: 10vh;
     }
@@ -412,6 +367,7 @@ section{
     .carousel {
         height: 50vh;
     }
+   
     .nav-toggle-label {
         display: flex;
         position: absolute;
@@ -447,5 +403,11 @@ section{
 
     p, #secF li{
         font-size: small;
+    }
+    h2, p, #secF li{
+        font-size: 1em;
+    }
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
