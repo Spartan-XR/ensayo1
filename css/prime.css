@@ -517,6 +517,14 @@ textarea.form-control {
         font-size: 1em;
     }
 
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .zoom-window {
+        display: none !important;
+    }
+
     .product-container{
         margin-top: 6rem;
         margin-left: -1rem;
@@ -582,6 +590,14 @@ textarea.form-control {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
     /*--------------PRODUCTOS----------------*/
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .zoom-window {
+        display: none !important;
+    }
+
     .product-container{
         margin-top: 6rem;
         margin-left: -1rem;
