@@ -239,6 +239,10 @@ section{
 /*-----------------------------------------------------------------------------------------*/
 /*-------------------------------------MEDIAS QUERYS---------------------------------------*/
 @media (min-width: 599px) and (max-width: 768px) {
+    .logo{
+        padding-bottom: 0;
+    }
+
     .banner{
         margin-top: 10vh;
     }
@@ -283,6 +287,10 @@ section{
     }
 }
 @media (max-width: 598px) {
+    .logo{
+        padding-bottom: 0;
+    }
+
     .banner{
         margin-top: 10vh;
     }
