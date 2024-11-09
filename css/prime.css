@@ -710,4 +710,7 @@ textarea.form-control {
         width: 225px;
         height: 225px;
     }
+    .garantia-section{
+        grid-template-columns: 1fr;
+    }
 }
