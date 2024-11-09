@@ -12,7 +12,6 @@ function mostrarSeccion() {
         }
     }
 }
-
 // Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar mostrarSeccion
