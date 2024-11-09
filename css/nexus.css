@@ -183,6 +183,17 @@ section {
     font-size: calc(0.8rem + 1vw);
 }
 
+.text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+    animation: bounce 2s infinite;
+}
+
+.sub-text {
+    font-size: calc(0.8rem + 1vw);
+}
+
 .particles {
     position: absolute;
     width: 100%;
