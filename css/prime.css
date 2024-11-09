@@ -466,6 +466,17 @@ textarea.form-control {
     margin-right: auto;
 }
 
+.titulo_garantia{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+    text-transform: uppercase;
+}
+
 .garantia-section {
     background: white;
     padding: 2rem;
