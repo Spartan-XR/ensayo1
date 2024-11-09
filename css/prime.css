@@ -139,7 +139,7 @@ footer {
 
 /* Usando degradados para generar imágenes de ejemplo */
 .carousel-item:nth-child(1) {
-    background-image: url(/img/productos/2.jpg);
+    background-image: url(/img/productos/2.webp);
 }
 
 .carousel-item:nth-child(2) {
