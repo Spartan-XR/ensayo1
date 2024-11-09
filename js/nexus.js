@@ -13,20 +13,7 @@ function mostrarSeccion() {
     }
 }
 
-// Funcionalidad de partículas (de a.js)
-function createParticles() {
-    const container = document.getElementById('particles');
-    for(let i = 0; i < 20; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.width = Math.random() * 10 + 'px';
-        particle.style.height = particle.style.width;
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 2 + 's';
-        container.appendChild(particle);
-    }
-}
+
 
 // Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', function() {
