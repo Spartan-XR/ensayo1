@@ -466,13 +466,7 @@ textarea.form-control {
     margin-right: auto;
 }
 
-.titulo_garantia{
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 .garantia-section {
-    grid-template-columns: 1fr;
     background: white;
     padding: 2rem;
     border-radius: 10px;
@@ -480,30 +474,28 @@ textarea.form-control {
     margin-bottom: 2rem;
 }
 
-.garantia-section h2 {
+.titulo_garantia {
     color: #333;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #005b96;
-    padding-bottom: 0.5rem;
-}
-
-.garantia-section ul {
-    list-style: none;
-    padding-left: 1rem;
-}
-
-.garantia-section li {
-    margin-bottom: 1rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.garantia-section li:before {
-    content: "✓";
-    color: #005b96;
-    position: absolute;
-    left: 0;
-}
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .underline {
+    width: 100%;
+    height: 2px;
+    background-color: #003366;
+    margin-bottom: 15px;
+  }
+  
+  .contenido_garantia {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  }
 
 .certificacion-section {
     background: white;
@@ -514,10 +506,9 @@ textarea.form-control {
 
 .slides {
     height: 50vh;
-    width: 80%;
+    width: 90%;
     overflow: hidden;
     position: relative;
-    margin-left: 10%;
     margin-bottom: 1rem;
     box-shadow: rgba(255, 96, 96, 0.45) 0px 5px 15px;
 }
@@ -651,8 +642,15 @@ textarea.form-control {
     .garantia-section{
         grid-template-columns: 1fr;
     }
-    .slides {
+
+   .slides{
+        height: 45dvh;
+    }
+
+    .slides img{
         width: 100%;
+        height: fit-content;
+        object-fit: contain;
     }
 }
 @media (max-width: 598px) {
@@ -730,7 +728,18 @@ textarea.form-control {
         grid-template-columns: 1fr;
     }
 
-    .slides {
+    .certificacion-section, .slides{
+        height: 25dvh;
+    }
+
+    .slides{
         width: 100%;
+        position: relative;
+    }
+
+    .slides img{
+        width: 100%;
+        max-height: fit-content;
+        object-fit: cover;
     }
 }
