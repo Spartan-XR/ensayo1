@@ -582,4 +582,14 @@ textarea.form-control {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
     /*--------------PRODUCTOS----------------*/
+    .product-container{
+        margin-top: 6rem;
+        margin-left: -1rem;
+    }
+
+    .videos{
+        width: 225px;
+        height: 225px;
+        margin-left: -.5rem;
+    }
 }
