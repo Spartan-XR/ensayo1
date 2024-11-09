@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
             formularioContacto.reset();
         }
     }
-
     // Inicializar funcionalidad de galería (de galeria.js)
     const mainImage = document.getElementById('mainImage');
     const zoomWindow = document.getElementById('zoomWindow');
