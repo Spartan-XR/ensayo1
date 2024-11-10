@@ -333,7 +333,7 @@ section{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    padding: 30px;
+    padding: 20px;
     margin-top: 9rem;
 }
 
@@ -404,7 +404,7 @@ section{
 
 /* Form */
 .contact-form {
-    padding: 30px;
+    padding: 20px;
     background: #f9f9f9;
     border-radius: 8px;
 }
@@ -777,11 +777,11 @@ textarea.form-control {
     p, #secF li{
         font-size: small;
     }
-    /*----------------CATALOGO----------------*/
+    /*-------------------CATALOGO------------------*/
     .categories-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    /*--------------PRODUCTOS----------------*/
+    /*-------------------PRODUCTOS----------------*/
     .product-container {
         grid-template-columns: 1fr;
     }
@@ -803,7 +803,11 @@ textarea.form-control {
         width: 225px;
         height: 225px;
     }
-/*------------------Garantia------------------*/
+
+    .contact-form{
+        padding: 20px;
+    }
+    /*------------------Garantia------------------*/
     .garantia-section{
         grid-template-columns: 1fr;
     }
@@ -823,5 +827,17 @@ textarea.form-control {
 
     .contact-container {
         grid-template-columns: 1fr;
+    }
+    /*--------------------Contanctos--------------------------*/
+    .contact-info{
+        width: 85%;
+    }
+
+    .contact-form{
+        width: 85%;
+    }
+
+    .social-media{
+        width: 85%;
     }
 }
