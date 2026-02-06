@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(-45deg, #000000, #000814, #001d3d, #003566, #000814, #000000);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #ffffff;
+    line-height: 1.6;
+    padding-top: 80px;
+    /* Space for the fixed header */
+    height: 100%;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    /* Prevent horizontal scrollbars during animations */
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+h1,
+h2 {
+    background: linear-gradient(90deg, #007bff, #ff0000, #007bff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    scroll-margin-top: 100px;
+    animation: textGradient 6s linear infinite;
+    display: inline-block;
+    /* Ensuring the clip works well */
+    width: 100%;
+}
+
+@keyframes textGradient {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+
+/* Section Header Container */
+#seccion {
+    width: 100%;
+    margin-bottom: 40px;
+    grid-column: 1 / -1;
+    /* Vital for grid layouts */
+}
+
+/* Alternating Alignment */
+section:nth-of-type(odd) #seccion {
+    text-align: left;
+}
+
+section:nth-of-type(even) #seccion {
+    text-align: right;
+}
+
+section {
+    padding: 120px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #222;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+
+/* Section Text Styling */
+section div pre {
+    font-family: 'Poppins', sans-serif;
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: inherit;
+    white-space: pre-wrap;
+    margin-bottom: 40px;
+}
+
+/* Social Media Section */
+#redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+#redes a {
+    display: flex;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#redes i {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.4s ease;
+}
+
+#redes a:hover {
+    transform: scale(1.2) translateY(-8px);
+}
+
+#redes a:hover i {
+    color: #ffffff;
+    text-shadow: 0 0 10px #007bff, 0 0 20px #ff0000;
+}
+
+/* Footer Styling */
+footer {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 60px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    background: linear-gradient(90deg, #007bff, #ff0000, #007bff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    animation: textGradient 6s linear infinite;
+    display: inline-block;
+}
+
+footer p {
+    color: #888;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Projects Grid Layout */
+#Proyectos {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Enforce max 3 columns on larger screens */
+@media (min-width: 1050px) {
+    #Proyectos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.proyecto-item {
+    position: relative;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    margin-bottom: 0;
+    /* Handled by grid gap */
+}
+
+
+.proyecto-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.3);
+    border-color: #007bff;
+}
+
+.proyecto-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.proyecto-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.proyecto-item:hover .proyecto-image img {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Glassmorphism Overlay */
+.proyecto-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+}
+
+.proyecto-item:hover .proyecto-info {
+    opacity: 1;
+}
+
+.proyecto-info h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.proyecto-info p {
+    font-size: 1.1rem;
+    color: #eee;
+    max-width: 80%;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+}
+
+.proyecto-item:hover .proyecto-info h3,
+.proyecto-item:hover .proyecto-info p {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .proyecto-info {
+        backdrop-filter: blur(8px);
+    }
+
+    .proyecto-info h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* --- Section Reveal Animations --- */
+section {
+    opacity: 0;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s ease-out;
+    will-change: transform, opacity;
+}
+
+.reveal-left {
+    transform: translateX(-200px) scale(0.95);
+    /* Symmetric from Left */
+}
+
+.reveal-right {
+    transform: translateX(200px) scale(0.95);
+    /* Symmetric from Right */
+}
+
+.reveal-active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    /* Return to center and full size */
+}
